@@ -1,0 +1,53 @@
+body {
+  margin: 0;
+  background: black;
+  min-height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.center {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+  z-index: 2;
+  transition: opacity 0.3s ease;
+}
+.hero {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin-top: 1vh; /* controla qué tan arriba queda el logo */
+}
+
+
+
+
+#bg-video {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+
+  /* estado inicial */
+  opacity: 0;
+  filter: brightness(0) contrast(3) blur(24px);
+
+}
+#intro-black {
+  position: fixed;
+  inset: 0;
+  background: black;
+  z-index: 5;
+  pointer-events: none;
+}
+

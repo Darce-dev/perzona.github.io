@@ -1,0 +1,42 @@
+/* Títulos de sección */
+.section-title {
+  font-family: "Tahoma", sans-serif;
+  font-size: 1rem;
+  font-weight: normal;
+  color: rgba(255, 255, 255, 0.9);
+  letter-spacing: 0.5px;
+  margin: 0;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  text-align: center;
+  
+  /* Efecto glow */
+  text-shadow: 
+    0 0 10px rgba(255, 255, 255, 0.5),
+    0 0 20px rgba(255, 255, 255, 0.3),
+    0 0 30px rgba(255, 255, 255, 0.2);
+}
+
+.title-music {
+  grid-area: title-music;
+}
+
+.title-events {
+  grid-area: title-events;
+  margin-top: 0.2rem;
+}
+/* Responsividad móvil */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 0.9rem;
+    padding-bottom: 0.4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 0.8rem;
+    letter-spacing: 0.3px;
+    padding-bottom: 0.3rem;
+  }
+}

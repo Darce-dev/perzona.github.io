@@ -1,0 +1,103 @@
+/* Header sticky cuando se hace scroll */
+.sticky-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  z-index: 100;
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.sticky-header.show {
+  display: flex;
+  opacity: 1;
+}
+
+.sticky-header .logo-small {
+  font-family: omori, sans-serif;
+  font-size: 1.3rem;
+  letter-spacing: 0.15em;
+  color: #f2f2f2;
+  margin: 0;
+  pointer-events: none;
+  text-shadow:
+    0 0 6px rgba(255,255,255,0.2),
+    0 0 15px rgba(255,255,255,0.1);
+}
+
+.sticky-header .social-links-header {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.sticky-header .social-icon {
+  color: #fff;
+  font-size: 20px;
+  filter: grayscale(100%) opacity(0.7);
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.sticky-header .social-icon:hover {
+  transform: scale(1.2);
+  filter: grayscale(0%) opacity(1);
+}
+
+/* Ocultar elementos originales cuando hay scroll */
+body.scrolled .center {
+  pointer-events: none;
+}
+
+body.scrolled .social-links {
+  pointer-events: none;
+}
+
+/* Responsividad móvil */
+@media (max-width: 768px) {
+  .sticky-header {
+    height: 50px;
+    padding: 0 1.5rem;
+  }
+  
+  .sticky-header .logo-small {
+    font-size: 1.1rem;
+    letter-spacing: 0.1em;
+  }
+  
+  .sticky-header .social-links-header {
+    gap: 1rem;
+  }
+  
+  .sticky-header .social-icon {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sticky-header {
+    height: 45px;
+    padding: 0 1rem;
+  }
+  
+  .sticky-header .logo-small {
+    font-size: 0.9rem;
+    letter-spacing: 0.08em;
+  }
+  
+  .sticky-header .social-links-header {
+    gap: 0.8rem;
+  }
+  
+  .sticky-header .social-icon {
+    font-size: 16px;
+  }
+}
